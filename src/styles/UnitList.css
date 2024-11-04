@@ -1,0 +1,11 @@
+/* .unitlist {
+  background-color: blue;
+} */
+
+.Idle {
+  color: red;
+}
+
+.completed, .c-green {
+  color: green;
+}
