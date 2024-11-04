@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { DeploymentContext } from "../context/DeploymentContext";
 import ChangeStatus from "./ChangeStatus";
-import "../styles/UnitList.css"
+import "../styles/UnitList.css";
 
 const UnitList: React.FC = () => {
   const deploymentContext = useContext(DeploymentContext);
@@ -16,7 +16,7 @@ const UnitList: React.FC = () => {
       <ul>
         {Object.keys(units).map((unitName) => (
           <li className={units[unitName]} key={unitName}>
-            {"unitName: " + unitName + " status: " + units[unitName]}{" "}
+            {unitName + " status: " + units[unitName]}{" "}
             <ChangeStatus unitName={unitName} />
           </li>
         ))}

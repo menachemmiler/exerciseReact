@@ -2,6 +2,7 @@ import "./styles/App.css";
 import { DeploymentProvider } from "./context/DeploymentContext";
 import UnitList from "./components/UnitList";
 import MissionCompleted from "./components/MissionCompleted";
+import Reload from "./components/Reload";
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
         <h1>מעקב אחר פריסת יחידות צה"ל</h1>
         <UnitList />
         <MissionCompleted />
-        <button onClick={() => {location.reload()}}>🔃</button>
+        <Reload />
       </div>
     </DeploymentProvider>
   );
