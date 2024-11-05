@@ -5,7 +5,6 @@ export default function NavBar() {
     <div className='navbar'>
         <NavLink to={'/Home'}>Home</NavLink><br />
         <NavLink to={'/UnitsPage'}>units page</NavLink><br />
-        {/* <NavLink to={'/pages/transfer'}>transfers</NavLink> */}
     </div>
   )
 }
