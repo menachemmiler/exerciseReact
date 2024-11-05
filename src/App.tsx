@@ -1,19 +1,25 @@
+import { Route, Routes } from "react-router-dom";
 import "./styles/App.css";
+import Home from "./pages/Home";
+import UnitsPage from "./pages/UnitsPage";
+import NavBar from "./components/NavBar";
 import { DeploymentProvider } from "./context/DeploymentContext";
-import UnitList from "./components/UnitList";
-import MissionCompleted from "./components/MissionCompleted";
-import Reload from "./components/Reload";
 
 function App() {
   return (
-    <DeploymentProvider>
-      <div style={{ padding: "20px", fontFamily: "Arial, sans-serif" }}>
-        <h1>מעקב אחר פריסת יחידות צה"ל</h1>
-        <UnitList />
-        <MissionCompleted />
-        <Reload />
+    <>
+      <div className="app">
+        <NavBar />
+        <div className="main">
+          <DeploymentProvider>
+            <Routes>
+              <Route path="/Home" element={<Home />} />
+              <Route path="/UnitsPage" element={<UnitsPage />} />
+            </Routes>
+          </DeploymentProvider>
+        </div>
       </div>
-    </DeploymentProvider>
+    </>
   );
 }
 
