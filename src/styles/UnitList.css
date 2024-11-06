@@ -4,8 +4,11 @@
 
 .Idle {
   color: red;
+  text-decoration: none;
 }
 
-.completed, .c-green {
+.completed,
+.c-green {
   color: green;
+  text-decoration: none;
 }

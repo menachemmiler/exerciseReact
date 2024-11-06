@@ -52,4 +52,5 @@
   justify-content: center;
   flex-direction: column;
   direction: rtl;
+  gap: 2%;
 }

@@ -16,11 +16,13 @@ const UnitList: React.FC = () => {
       <h2>רשימת יחידות</h2>
       <ul>
         {Object.keys(units).map((unitName) => (
-          <div className={units[unitName]} key={unitName}>
-            <NavLink to={`/units/${unitName}`}>
+          <div key={unitName}>
+            <NavLink className={units[unitName]} to={`/units/${unitName}`} title="details">
               {"unitName: " + unitName + " status: " + units[unitName]}
-            </NavLink>
-            <ChangeStatus unitName={unitName} />
+            </NavLink>  
+            <div>
+              <ChangeStatus unitName={unitName} />
+            </div>
           </div>
         ))}
       </ul>
